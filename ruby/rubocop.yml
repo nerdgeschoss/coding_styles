@@ -11,3 +11,8 @@ Rails:
 
 Bundler/DuplicatedGem:
   Enabled: true
+
+# Single quotes do not yield any performance gains but just make the code harder
+# to read and write.
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
