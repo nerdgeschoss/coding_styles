@@ -6,8 +6,16 @@ AllCops:
   Exclude:
     - db/schema.rb
 
+require:
+  - rubocop/rspec/focused
+
 Rails:
   Enabled: true
 
 Bundler/DuplicatedGem:
+  Enabled: true
+
+# Focused tests are a common reason why tests appear to be passing while they're
+# actually not. This way focusing a test and commiting it is treated as an error.
+RSpec/Focused:
   Enabled: true
